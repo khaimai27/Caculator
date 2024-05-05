@@ -4,6 +4,7 @@ import Khung from './components/KhungCalculator';
 import Screen from './components/ScreenCalculator';
 import ButtonBox from './components/BtnBoxCalculator';
 import Button from './components/ButtonCalculator';
+import CalcProvider from './Context/CalculatorContext';
 
 const btnValues = [
   ["C", "+-", "%", "/"],
@@ -16,6 +17,7 @@ const btnValues = [
 function App() {
   return (
     <div>
+      <CalcProvider>
       <Khung>
         <Screen/>
         <ButtonBox>
@@ -27,6 +29,7 @@ function App() {
           ))}
         </ButtonBox>
     </Khung>
+    </CalcProvider>
     </div>
   );
 }
